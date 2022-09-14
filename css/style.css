@@ -1,0 +1,586 @@
+/* Browser reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Trick for easy usage of rem units */
+
+HTML {
+  font-size: 62.5%;
+}
+
+/* Setting up the variables for colors picked from color picker  */
+
+:root {
+  --grey: #d4cfcf;
+  --customwhite: #ffffff;
+  --bg-dark-2: #1f1e1e;
+  --bg-dark-1: #181818;
+  --customblack: #111010;
+  --custompink: #fc3546;
+}
+
+body {
+  background-color: var(--customblack);
+  color: var(--customwhite);
+  font-family: "Montserrat";
+}
+
+/* styling the NAV bar*/
+
+.Hamburg-icon {
+  display: none;
+}
+
+.container {
+  max-width: 75%;
+  margin-inline: auto;
+}
+
+.fa-solid.fa-bars {
+  display: none;
+}
+
+.logo img {
+  width: 12em;
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-block: 5em;
+}
+
+.list {
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: 500;
+  gap: 3em;
+  list-style-type: none;
+}
+
+/* using pseudo selectors to put the deop down arrows beside the menu items */
+
+.list li:nth-child(1)::after,
+.list li:nth-child(5)::after {
+  content: "▼";
+}
+
+/* Styling the Hero Section */
+.hero {
+  display: flex;
+  width: 100%;
+}
+
+.left-image,
+.left-image img {
+  width: 100%;
+}
+
+.right-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-text h4 {
+  color: var(--custompink);
+  font-size: 2.5rem;
+}
+
+.right-text h1 {
+  font-size: 5rem;
+  margin-bottom: 0.5em;
+}
+
+.right-text p {
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.right-text button {
+  background-color: var(--custompink);
+  border: none;
+  color: var(--white);
+  font-size: 1.6rem;
+  margin-top: 4em;
+  padding: 1.2em 2.5em;
+  margin-right: auto;
+}
+
+/* ---------- Setting up the service section ------------ */
+
+.box {
+  position: absolute;
+  background-color: var(--bg-dark-1);
+  height: 960px;
+  left: -19em;
+  top: -10em;
+  width: 80em;
+  z-index: -10;
+}
+
+.service-section {
+  margin-top: 10em;
+  position: relative;
+}
+
+.service-cards {
+  display: flex;
+  gap: 2em;
+  justify-content: space-between;
+}
+
+.service-card {
+  background-color: var(--bg-dark-2);
+  padding: 4em 5em;
+}
+
+.service-card.two {
+  background-color: var(--custompink);
+}
+
+.service-card h1 {
+  font-weight: 600;
+  margin: 0.7em 0;
+  font-size: 3rem;
+}
+
+.service-card p {
+  color: var(--grey);
+  font-size: 1.8rem;
+}
+
+.service-btn .btn {
+  font-size: 1.8rem;
+}
+
+.service-btn i {
+  color: var(--custompink);
+  margin-left: 1rem;
+  font-size: 2rem;
+}
+
+.service-card.two .service-btn i {
+  color: var(--white);
+}
+
+.service-btn button {
+  background-color: transparent;
+  border: none;
+  color: var(--custompink);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 29px;
+  text-transform: uppercase;
+}
+
+.service-card:nth-child(2) button {
+  color: var(--white);
+}
+
+/* ---------- Statistics------------ */
+
+.stats {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10em;
+}
+
+.stats .left {
+  flex: 0.8;
+  text-align: center;
+  width: 100%;
+}
+
+.stats .left h1 {
+  color: var(--custompink);
+  font-size: 10rem;
+  font-weight: 800;
+}
+
+.stats .left p {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.stats .right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  flex: 1.2;
+  width: 100%;
+}
+
+.stats .right .stats-box {
+  align-items: center;
+  background-color: var(--bg-dark-2);
+  display: flex;
+  flex-direction: column;
+  height: 12em;
+  justify-content: center;
+}
+
+.stats .right .stats-box h1 {
+  color: var(--custompink);
+  font-size: 4.5rem;
+}
+
+.stats .right .stats-box p {
+  color: var(--grey);
+  font-size: 2rem;
+  padding-top: 0.5em;
+}
+
+/* ---------- Styling the grid of projects
+ ------------ */
+
+.projects {
+  margin-top: 18em;
+}
+
+.headline {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3em;
+}
+
+.headline h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.headline p {
+  color: var(--grey);
+  margin-block: 1em;
+  font-size: 2rem;
+}
+
+.headline .right button {
+  background-color: var(--custompink);
+  color: var(--white);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  margin-top: 2em;
+  padding: 1.8rem 4rem;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8em;
+}
+
+.project-card .img {
+  align-items: center;
+  background-color: var(--bg-dark-2);
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.project-card img {
+  width: 90%;
+}
+
+.project-card h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-block: 1rem;
+}
+
+.project-card button {
+  color: var(--custompink);
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.project-card i {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+/* contact styling*/
+.contact {
+  margin-top: 8em;
+}
+
+.contact-box {
+  align-items: center;
+  background-color: var(--bg-dark-2);
+  display: flex;
+  justify-content: space-between;
+  padding: 7rem 4rem;
+  margin-top: 15em;
+}
+
+.contact-box .left {
+  width: 60%;
+}
+
+.contact-box .left h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-box .left p {
+  color: var(--grey);
+  font-size: 1.5rem;
+}
+
+.right button {
+  background-color: var(--custompink);
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  margin-top: 1em;
+  padding: 1.8rem 4rem;
+}
+
+/* ---------- FOOTER ------------ */
+
+.footer-menus ul {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 500;
+  gap: 1.5em;
+  justify-content: center;
+  list-style-type: none;
+  margin-block: 4em;
+}
+
+footer {
+  background-color: var(--bg-dark-2);
+}
+
+.footer-media {
+  display: flex;
+  align-items: center;
+  padding-block: 3rem;
+}
+
+.footer-media .logo img {
+  height: 4em;
+}
+
+.footer-media .icons {
+  margin-left: 40rem;
+  display: flex;
+  gap: 3em;
+}
+
+/* Adding Media queries to make it responsive */
+
+@media (width <=430px) {
+  HTML {
+    font-size: 0.5rem;
+  }
+
+  .Hamburg-icon {
+    display: inline-block;
+  }
+
+  .fa-solid.fa-bars {
+    display: block;
+    color: var(--custompink);
+  }
+
+  .navbar {
+    margin: 0;
+    margin-block: 4rem;
+  }
+
+  .navbar .logo img {
+    width: 50%;
+  }
+
+  .navbar i {
+    font-size: 3rem;
+  }
+
+  .navbar .list {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .box {
+    display: none;
+  }
+
+  .right-desc {
+    text-align: center;
+  }
+
+  .right-desc h4 {
+    font-size: 4rem;
+  }
+
+  .right-desc h1 {
+    font-size: 5rem;
+    margin-block: 1rem;
+  }
+
+  .right-desc p {
+    font-size: 2.5rem;
+  }
+
+  .right-desc button {
+    font-size: 2rem;
+    margin: 0;
+    margin-block: 2rem;
+  }
+
+  .service-section {
+    margin-right: 0;
+    margin-inline: auto;
+  }
+
+  .service-cards {
+    flex-direction: column;
+  }
+
+  .service-card {
+    background-color: var(--bg-dark-2);
+    padding: 5rem;
+  }
+
+  .service-card .logo img {
+    width: 7rem;
+  }
+
+  .service-card h1 {
+    font-size: 5rem;
+  }
+
+  .service-card p {
+    font-size: 2.5rem;
+  }
+
+  .service-card .service-btn .btn {
+    font-size: 2rem;
+  }
+
+  .stats {
+    flex-direction: column;
+    margin: 0;
+    margin-top: 2rem;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .projects {
+    margin-inline: auto;
+    width: 90%;
+    margin-block: 10rem;
+  }
+
+  .projects.container .headline {
+    margin: 0;
+    gap: 0rem;
+    margin-bottom: 2rem;
+  }
+
+  .projects .headline .left {
+    width: 70%;
+  }
+
+  .projects .headline .right {
+    width: 30%;
+  }
+
+  .projects .headline .left h1 {
+    font-size: 4rem;
+  }
+
+  .projects .headline .left p {
+    font-size: 2rem;
+  }
+
+  .project-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12rem;
+  }
+
+  .projects .headline .right {
+    display: flex;
+    justify-content: center;
+  }
+
+  .projects .headline .right button {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 1.5rem 2rem;
+  }
+
+  .project-card h1 {
+    font-size: 4rem;
+  }
+
+  .project-card button {
+    font-size: 2rem;
+  }
+
+  .contact-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+
+  .contact-box .left {
+    width: 90%;
+  }
+
+  .contact-box .left h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-box .left p {
+    color: var(--grey);
+    font-size: 2.2rem;
+    margin-block: 2rem;
+  }
+
+  .contact-box button {
+    font-size: 2.5rem;
+    padding: 2rem 5rem;
+  }
+
+  .footer-menus ul {
+    display: none;
+  }
+
+  .footer-media {
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 5em;
+  }
+
+  .footer-media .icons {
+    margin: 0;
+    display: flex;
+    gap: 3em;
+  }
+}
